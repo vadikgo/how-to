@@ -15,7 +15,7 @@ pacman -S python2
 cp /usr/bin/python2.exe /usr/bin/python.exe
 curl -O https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
-pacman -S gcc
+pacman -S gcc git
 pacman -S libffi-devel
 ln -s /usr/lib/libffi-3.2.1/include /usr/include/libffi
 pacman -S openssl-devel
