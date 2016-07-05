@@ -2,6 +2,12 @@
 
 Install msys2 - https://msys2.github.io
 
+For mount c:\users to /home add this line to /etc/fstab:
+
+```
+c:\users /home ntfs binary,posix=0,noacl,user 0 0
+```
+
 run commands in msys2 terminal
 
 ```
@@ -31,10 +37,4 @@ cp ansible ansible-vault
 cp /usr/lib/python2.7/site-packages/six.py /usr/lib/python2.7/site-packages/ansible-2.1.0.0-py2.7.egg/ansible/module_utils/
 ansible --version
 ansible-playbook --version
-```
-
-For mount c:\users to /home add this line to /etc/fstab:
-
-```
-c:\users /home ntfs binary,posix=0,noacl,user 0 0
 ```
