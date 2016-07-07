@@ -16,12 +16,13 @@ cp /usr/bin/python2.exe /usr/bin/python.exe
 curl -O https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
 pacman -S gcc git
-pacman -S libffi-devel
+pacman -S libffi-devel libxml2 libxml2-devel libxslt-devel
 ln -s /usr/lib/libffi-3.2.1/include /usr/include/libffi
 pacman -S openssl-devel
 pip install paramiko PyYAML Jinja2 httplib2 six
 sed -i 's/define __BSD_VISIBLE 1/define __BSD_VISIBLE 0/' /usr/include/python2.7/pyconfig.h
 pip install pycrypto
+pip install lxml
 git clone https://github.com/ansible/ansible.git --recursive
 cd ansible
 python setup.py install
