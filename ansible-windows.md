@@ -26,7 +26,7 @@ pip install lxml
 git clone https://github.com/ansible/ansible.git --recursive
 cd ansible
 python setup.py install
-cd /usr/lib/python2.7/site-packages/ansible-2.2.0-py2.7.egg/EGG-INFO/scripts/
+cd $(python -c "import os, ansible; print os.path.dirname(os.path.dirname(ansible.__file__))")/EGG-INFO/scripts/
 cp ansible ansible-playbook
 cp ansible ansible-console
 cp ansible ansible-doc
